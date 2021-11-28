@@ -167,6 +167,48 @@ http://action.sakurakoyi.top:10010/bilibili.php?aid=314
 
 <img width="30%" src="http://anime.sakurakoyi.top:10843/usr/uploads/2021/11/679516595.png">
 
+### 5.TokyoMX当日节目表API
+
+此API是获取日本电视台-TokyoMX1台的当日节目表(其中[喵帕斯动画的TokyoMX直播](http://anime.sakurakoyi.top:10843/anime/id-276/bangumi.anime?action=get&p=3)的节目单就是使用的此API)
+
+**1.直接访问**
+
+链接：
+
+`http://action.sakurakoyi.top:10010/api/tokyoMX`
+
+**2.json访问**
+
+请求方式：
+
+`GET  http://action.sakurakoyi.top:10010/api/tokyoMX?json=1`
+
+返回数据：
+
+```bash
+[
+{ "Event_id": "0xdbe2", "Start_time": "2021年11月21日05時00分00秒", "Duration": "00:30:00", "Event_name": "お買い物情報", "Event_text": " ", "Component": "1080i 16:9 パンベクトルなし", "Sound": "ステレオ", "Event_detail": ""},
+......
+{ "Event_id": "0x0001", "Start_time": "2021年11月22日02時35分00秒", "Duration": "02:25:00", "Event_name": "放送休止中", "Event_text": "", "Component": "", "Sound": "", "Event_detail": ""}
+]
+```
+
+### 6.json跨域支持API
+
+此API是将一些无法跨域使用的json通过API实现跨域请求
+（不是返回jsonp，而是json）
+
+**1.直接访问**
+
+链接：
+
+`http://action.sakurakoyi.top:10010/api/json?url={链接}`
+
+
+```bash
+{您需要跨域的json的内容}
+```
+
 ---
 
 **更多API正在适配中**
